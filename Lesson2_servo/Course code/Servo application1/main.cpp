@@ -7,9 +7,10 @@ int main(void)
 	__HAL_RCC_TIM4_CLK_ENABLE();   // Enable the HAL_TIMER clock
 
 	// This create pinStruct type for servoPin
-	pinStruct_t servoPin;
-	servoPin.port = GPIOB;
-	servoPin.selectedPin = GPIO_PIN_8;
+	//pinStruct_t servoPin;
+	//servoPin.port = GPIOB;
+	//servoPin.selectedPin = GPIO_PIN_8;
+	pinStruct_t servoPin = {GPIOB,GPIO_PIN_8};
 	
 	static Servo servo (servoPin, TIM4, GPIO_AF2_TIM4, TIM_CHANNEL_3);     // this is a servo object
 		

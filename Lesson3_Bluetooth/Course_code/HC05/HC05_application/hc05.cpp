@@ -31,7 +31,10 @@ HC05::HC05(pinStruct_t& uartPin,
 char HC05::GetChar(void)
 {
 	//wait for rx buffer to be full then read the data (check the status register (SR))
-	while((huart.Instance->SR & USART_SR_RXNE) != USART_SR_RXNE) {}
-		
+	while((huart.Instance->SR & USART_SR_RXNE) != USART_SR_RXNE){}
 	return huart.Instance->DR;
+	//uint8_t data[1];
+	//HAL_UART_Receive(&huart, data, sizeof(data), HAL_MAX_DELAY);
+	//return data[0];
 }
+

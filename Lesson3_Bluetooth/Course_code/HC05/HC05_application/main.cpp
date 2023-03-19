@@ -8,16 +8,18 @@ int main(void)
 	__HAL_RCC_GPIOA_CLK_ENABLE();  // Enable the HAL_GPIO clock (This is are macros)
 	__HAL_RCC_USART1_CLK_ENABLE();  // Enable the HAL_TIMER clock
 	
-	pinStruct_t uartRxPin;
-	uartRxPin.port = GPIOA;
-	uartRxPin.selectedPin = GPIO_PIN_10;
+	//pinStruct_t uartRxPin;
+	//uartRxPin.port = GPIOA;
+	//uartRxPin.selectedPin = GPIO_PIN_10;
+	pinStruct_t uartRxPin = {GPIOA,GPIO_PIN_10};
 	
-	static HC05 hc05 (uartRxPin, USART1, 9600, GPIO_AF7_USART1, UART_MODE_RX);     // this is a servo object  
+	static HC05 hc05(uartRxPin,USART1,9600,GPIO_AF7_USART1,UART_MODE_RX);     // this is a servo object  
 	while(1)
 	{
 		bluetoothData = hc05.GetChar();
-		
 	}
+		
+
 }
 
 //The Method for HAL delay function this can be find in the startup file.s

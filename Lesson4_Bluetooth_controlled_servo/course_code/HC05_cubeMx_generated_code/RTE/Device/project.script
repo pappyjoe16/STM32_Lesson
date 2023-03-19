@@ -1,0 +1,7 @@
+load STM32F411RETx 
+project name STCubeGenerated 
+project toolchain "MDK-ARM V5" 
+project path "C:\Users\XPS\OneDrive\Documents\My_lessons\STM32_Lesson\Lesson3_Bluetooth\Course_code\HC05\HC05_cubeMx_generated_code\RTE\Device\STM32F411RETx\" 
+set tpl_path "C:\Users\XPS\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.0\MDK\CubeMX" 
+set dest_path "STM32F411RETx" 
+SetCopyLibrary  "copy as reference"
