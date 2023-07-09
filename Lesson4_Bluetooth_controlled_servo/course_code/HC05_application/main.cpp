@@ -33,6 +33,7 @@ int main(void)
 			case 'l':
 			case 'L':
 				//servo.TurnShaft(SERVO_LEFTPOSITION);
+			
 			blinky_bluetooth.Blink(100);
 			break;
 			case 'm':

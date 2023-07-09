@@ -26,39 +26,12 @@ Project File Date:  03/11/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Rebuild target 'Target 1'
-compiling stm32f4xx_hal_rcc.c...
-assembling startup_stm32f411xe.s...
-compiling stm32f4xx_hal.c...
-compiling stm32f4xx_hal_cortex.c...
-compiling system_stm32f4xx.c...
-compiling stm32f4xx_hal_gpio.c...
-compiling stm32f4xx_hal_pwr_ex.c...
-compiling stm32f4xx_hal_pwr.c...
-compiling stm32f4xx_hal_dma_ex.c...
-compiling stm32f4xx_hal_rcc_ex.c...
-compiling stm32f4xx_hal_dma.c...
-compiling stm32f4xx_hal_usart.c...
-compiling stm32f4xx_hal_uart.c...
-hc05.cpp(1): warning: In file included from...
-./hc05.h(18): error: extra qualification on member 'UART_Transmit'
-                void HC05::UART_Transmit(char data);
-                     ~~~~~~^
-hc05.cpp(44): error: no matching function for call to 'HAL_UART_Transmit'
-  HAL_UART_Transmit(&huart, my_string, sizeof(my_string), HAL_MAX_DELAY);
-  ^~~~~~~~~~~~~~~~~
-C:/Users/XPS/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_uart.h(722): note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char, char_traits<char>, allocator<char>>') to 'const uint8_t *' (aka 'const unsigned char *') for 2nd argument
-HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                  ^
-2 errors generated.
+Build target 'Target 1'
 compiling hc05.cpp...
-main.cpp(1): warning: In file included from...
-./hc05.h(18): error: extra qualification on member 'UART_Transmit'
-                void HC05::UART_Transmit(char data);
-                     ~~~~~~^
-1 error generated.
 compiling main.cpp...
-".\Objects\hc05_main_app.axf" - 3 Error(s), 0 Warning(s).
+linking...
+Program Size: Code=2326 RO-data=450 RW-data=12 ZI-data=1712  
+".\Objects\hc05_main_app.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -103,15 +76,15 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.8.1
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
       Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
       Include file:  MDK/Templates/Inc/stm32f4xx_it.h
       Include file:  MDK/Templates_LL/Inc/main.h
-      Source file:   MDK/Templates/Src/main.c
+      Source file:   MDK/Templates_LL/Src/main.c
       Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
       Include file:  MDK/Templates/Inc/main.h
-      Include file:  CMSIS/Driver/Config/RTE_Device.h
       Source file:   MDK/Templates/Src/stm32f4xx_it.c
-      Source file:   MDK/Templates_LL/Src/main.c
+      Source file:   MDK/Templates/Src/main.c
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.8.1
       Include file:  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -142,13 +115,12 @@ Package Vendor: Keil
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f411xe.s
       Source file:   MDK/Device/Source/ARM/STM32F411xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f411xe.s
       Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
       Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
-Target not created.
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>
